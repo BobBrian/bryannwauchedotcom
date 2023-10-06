@@ -31,16 +31,26 @@ export default function Post() {
     //max-w-5xl - This is the maximum width of the background are when in full screen
     //m-auto controls the margin of the background area
     // https://css-tricks.com/almanac/properties/p/padding/ (Info on Padding)
+    //max-w-md space-y-1 list-disc list-inside text-3xl mb-8
     <div className="bg-slate-200  w-[calc(50%-2rem)]  max-w-5xl pt-16 pr-16 pb-8 pl-16  m-auto z-2"> 
      {/* Main Project */}
-     <div className="flex justify-center items-center pb-8">
-           {/* w-3/4 is what controls the width of the table */}
-          <div className="w-3/4  p-6 bg-white border border-gray-200 rounded-lg ">
-          <a href="#">
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">Hello Welcome to My Protfolio Site</h5> 
+     <a href="#">
+            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-center underline">Hello Welcome to My Protfolio Site</h5> 
           </a>
+     <div className="flex  pb-8">
+           {/* w-3/4 is what controls the width of the table */}
+          <div className="w-3/4  p-6 bg-transparent  ">
+          <p className="mb-3">I am full-stack developer which means I specialize in  building both The front end (the parts of a website a user sees and interacts with) and the back end (the behind-the-scenes data storage and processing) of a website which require different skill sets. </p>
+          <h2 className="underline">Technology Specilizations</h2>
+          <ul className="max-w-md space-y-1 list-disc list-inside  mb-8">
+            <li>C#</li>
+            <li>React</li>
+            <li>Javascript</li>
+            <li>Postgrsql</li>
+            <li>Nextjs</li>
+          </ul>
+
           <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Below are projects that showcase my skills as a Full Stack Software Developer</p>
-         
           </div>
       </div>
       {/* Container for Other Projects */}
