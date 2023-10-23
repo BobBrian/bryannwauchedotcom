@@ -1,7 +1,12 @@
+'use client'
 import React from 'react'
+import { useRouter } from 'next/navigation'
+import Link from 'next/link'
 
 
 export default function Post() {
+  const router = useRouter()
+
   return (
     <div className="bg-slate-200  w-[calc(80%-2rem)]  max-w-5xl pt-16 pr-16 pb-8 pl-16  m-auto z-2"> 
      {/* Main Project */}
@@ -28,15 +33,32 @@ export default function Post() {
       <div className="flex flex-wrap justify-center items-center">
         <div className="w-1/2  p-6 bg-white border border-gray-200 rounded-lg ">
           <a href="#">
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">Sample Project A</h5> 
+            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">Todo Application</h5> 
           </a>
-          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-          <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            View Project
-          </a>
+          <p className="mb-3 font-normal text-gray-700"> An Application to provide yourself with a list of 
+          your priorities in order to ensure that you don't forget anything and are able to effectively plan out your tasks
+          so that they are all accomplished in the correct time frame.</p>
+          <button className="inline-flex items-center px-3 py-2 text-sm font-medium 
+                text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 
+                focus:outline-none focus:ring-blue-300">
+                <Link href="/todo">View Project</Link>   
+          </button>
         </div>
 
-       <div className="w-1/2  p-6 bg-white border border-gray-200 rounded-lg ">
+       {/* <div className="w-1/2  p-6 bg-white border border-gray-200 rounded-lg ">
+          <a href="#">
+            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">Review Application</h5> 
+          </a>
+          <p className="mb-3 font-normal text-gray-700">An Application to provide users a way to leave reviews 
+          on specific resturants they have visited</p>
+          <button type="button" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white 
+          bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300" 
+          onClick={() => router.push('/resturant')}>
+            View Project
+          </button>
+        </div> */}
+
+        {/* <div className="w-1/2  p-6 bg-white border border-gray-200 rounded-lg ">
           <a href="#">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">Sample Project A</h5> 
           </a>
@@ -54,17 +76,8 @@ export default function Post() {
           <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
             View Project
           </a>
-        </div>
-
-        <div className="w-1/2  p-6 bg-white border border-gray-200 rounded-lg ">
-          <a href="#">
-            <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">Sample Project A</h5> 
-          </a>
-          <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">Here are the biggest enterprise technology acquisitions of 2021 so far, in reverse chronological order.</p>
-          <a href="#" className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">
-            View Project
-          </a>
-        </div>
+        </div> */}
+    
       </div>
     </div>
   )

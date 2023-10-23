@@ -1,12 +1,14 @@
 "use client"
 import React from 'react'
+import { redirect } from 'next/navigation'
+
 
 import {useState, useEffect} from 'react' 
 
-interface Todo {
-  id:number,
-  description:string
-}
+// interface Todo {
+//   id:number,
+//   description:string
+// }
 
 export default function Todo() {
   const [todos,setTodo] = useState<Todo[]>([])
@@ -19,15 +21,19 @@ export default function Todo() {
   },[])
 
   const handleSubmit = (e:any) => {
-    const todo = {description}
-
-    fetch("http://localhost:3100/todos",{
-      method: 'POST',
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(todo)
-    }).then(() =>{
-      console.log("A NEW TODO HAS BEEN ADDED")
-    })
+    try {
+      const todo = {description}
+  
+      fetch("http://localhost:3100/todos",{
+        method: 'POST',
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(todo)
+      }).then(() =>{
+        console.log("A NEW TODO HAS BEEN ADDED")
+      })
+    } catch (error) {
+      
+    }
   }
 
   const deleteTodo = (id:number) => {
