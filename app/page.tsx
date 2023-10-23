@@ -1,9 +1,7 @@
-import Post from "@/components/post";
-//
+import Post from "@/app/components/post";
 
 export default function Home() {
   return (
-    //This is where the responsive design is put
     <div className=" md:w-full  md:items-center md:justify-between">
       <div className="font-mono">
 				<h1 className="text-gray-50 text-6xl text-center mt-6">Chibuikem Nwauche</h1>		
