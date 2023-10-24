@@ -17,7 +17,7 @@ export default function Footer() {
                     <a href="https://www.instagram.com/" className="mr-4 hover:underline md:mr-6">Instagram</a>
                 </li>
                 <li>
-                    <a href="https://github.com/" className="hover:underline">GitHub</a>
+                    <a href="https://github.com/BobBrian" className="hover:underline">GitHub</a>
                 </li>
             </ul>
         </div>

@@ -1,14 +1,12 @@
 "use client"
 import React from 'react'
 import { redirect } from 'next/navigation'
-
-
 import {useState, useEffect} from 'react' 
 
-// interface Todo {
-//   id:number,
-//   description:string
-// }
+interface Todo {
+  id:number,
+  description:string
+}
 
 export default function Todo() {
   const [todos,setTodo] = useState<Todo[]>([])
@@ -29,7 +27,7 @@ export default function Todo() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(todo)
       }).then(() =>{
-        console.log("A NEW TODO HAS BEEN ADDED")
+        alert("Todo Added Successfully")
       })
     } catch (error) {
       
@@ -37,13 +35,16 @@ export default function Todo() {
   }
 
   const deleteTodo = (id:number) => {
-    fetch(`http://localhost:3100/todos/${id}`,{
-      method:'DELETE'
-    }).then(() => {
-      console.log('Todo Deleted')
-      
-    })
 
+    if(window.confirm('Todo Has Been Deleted. Please Restart Page')){
+      fetch(`http://localhost:3100/todos/${id}`,{
+      method:'DELETE'
+     }).then(() => {
+      console.log("Todo Has Been Deleted. Please Restart Page")
+     }).catch((err) =>{
+      console.log(err.message)
+     })
+    }
   }
 
   return (
