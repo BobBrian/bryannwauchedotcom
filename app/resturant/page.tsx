@@ -20,25 +20,24 @@ export default function Home() {
 
   const handleSubmit = (e:any) => {
     const rest = {authorname,resturantname,body}
-
     fetch("http://localhost:3100/resturant",{
       method: 'POST',
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(rest)
 
     }).then(() =>{
-      console.log("A NEW TODO HAS BEEN ADDED")
+      alert("Todo Added Successfully")
     })
   }
 
   const deleteTodo = (id:number) => {
-    fetch(`http://localhost:3100/resturant/${id}`,{
-      method:'DELETE'
-    }).then(() => {
-      console.log('Todo Deleted')
-      
-    })
-
+    if(window.confirm('Review Has Been Deleted. Please Restart Page')){
+        fetch(`http://localhost:3100/resturant/${id}`,{
+        method:'DELETE'
+      }).then(() => {
+        console.log('Todo Deleted')
+      })
+    }
   }
 
   return (
@@ -100,7 +99,7 @@ export default function Home() {
                         </td>
 
                         <td className="px-6 py-4">
-                          <Link href={`/${rest.id}`} className="text-white bg-blue-700 hover:bg-lime-500 
+                          <Link href={`resturant/${rest.id}`} className="text-white bg-blue-700 hover:bg-lime-500 
                           focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm 
                           px-5 py-2.5 mr-2 mb-2 ">Details</Link>
                         </td>

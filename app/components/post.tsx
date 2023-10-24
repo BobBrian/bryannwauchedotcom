@@ -35,8 +35,7 @@ export default function Post() {
           <a href="#">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">Todo Application</h5> 
           </a>
-          <p className="mb-3 font-normal text-gray-700"> An Application to provide yourself with a list of 
-          your priorities in order to ensure that you don't forget anything and are able to effectively plan out your tasks
+          <p className="mb-3 font-normal text-gray-700"> An Application  to effectively plan out your tasks
           so that they are all accomplished in the correct time frame.</p>
           <button className="inline-flex items-center px-3 py-2 text-sm font-medium 
                 text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 
