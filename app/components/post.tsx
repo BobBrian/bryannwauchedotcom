@@ -45,7 +45,7 @@ export default function Post() {
           </button>
         </div>
 
-       {/* <div className="w-1/2  p-6 bg-white border border-gray-200 rounded-lg ">
+       <div className="w-1/2  p-6 bg-white border border-gray-200 rounded-lg ">
           <a href="#">
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 ">Review Application</h5> 
           </a>
@@ -56,7 +56,7 @@ export default function Post() {
           onClick={() => router.push('/resturant')}>
             View Project
           </button>
-        </div> */}
+        </div>
 
         {/* <div className="w-1/2  p-6 bg-white border border-gray-200 rounded-lg ">
           <a href="#">
