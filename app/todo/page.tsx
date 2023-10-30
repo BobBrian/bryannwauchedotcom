@@ -1,4 +1,4 @@
-"use client"
+
 import React from 'react'
 import { AddNewTodo } from '../components/addnewTodo'
 import * as PostApi from  "@/app/lib/actions"
@@ -18,14 +18,12 @@ export default async  function Todo() {
     revalidatePath("/");
   };
   
-
   const deleteTodo = async (id: number) => {
     "use server";
     if(window.confirm('Are You Sure you want to delete this entry')){
       await PostApi.DeletePost(id);
       revalidatePath("/");
-    }
-    
+    } 
   };
 
   return (
