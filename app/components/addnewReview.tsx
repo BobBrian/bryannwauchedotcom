@@ -1,8 +1,27 @@
+"use client";
 import React from 'react'
+import { useState, useTransition } from "react";
 
-export const AddNewReview = () => {
+export const AddNewReview = ({ addNewRewview }: { addNewRewview: any }) => {
+
+  const [isPending, startTransition] = useTransition();
+  const [authorname,setAuthorname] = useState('')
+  const [resturantname,setResturantname] = useState('')
+  const [body,setBody] = useState('')
+
+
   return (
-    <form >
+    <form className="w-full flex mb-10" onSubmit={(e) => {
+      e.preventDefault();
+      if (authorname.trim().length === 0) {return;}
+      startTransition(() => {
+        addNewRewview(authorname, resturantname, body);
+      });
+      setAuthorname("");
+      setResturantname("");
+      setBody("");
+    }
+  }>
             <div className="grid md:grid-cols-2 md:gap-6">
                 <div className="relative z-0 w-full mb-6 group">
                     <input type="text"   className="block py-2.5 px-0 w-2/4 text-sm text-gray-900 bg-gray-50

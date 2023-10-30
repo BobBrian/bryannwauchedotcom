@@ -8,16 +8,16 @@ export const AddNewTodo = ({ addNewTodo }: { addNewTodo: any }) => {
     const [isPending, startTransition] = useTransition();
 
   return (
-    <form className="w-full flex mb-10"
-    onSubmit={(e) => {
-      e.preventDefault();
-      if (description.trim().length === 0) {
-        return;}
-      startTransition(() => {
-        addNewTodo(description);
-      });
-      setDescription("");
-    }}>
+    <form className="w-full flex mb-10" onSubmit={(e) => {
+        e.preventDefault();
+        if (description.trim().length === 0) {
+          return;}
+        startTransition(() => {
+          addNewTodo(description);
+        });
+        setDescription("");
+      }
+    }>
         <div>
           <label className="block mb-2 text-lg font-medium text-slate-200 ">Todo Task</label>
           <input value={description} className="bg-gray-50 border border-stone-600 text-gray-900 

@@ -12,9 +12,9 @@ export default async  function Todo() {
   
   const todos: Todos = await PostApi.GetAllPost();
 
-  const postNewTodo = async (title: string) => {
+  const postNewTodo = async (description: string) => {
     "use server";
-    await PostApi.AddPost(title);
+    await PostApi.AddPost(description);
     revalidatePath("/");
   };
   

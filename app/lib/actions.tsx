@@ -59,9 +59,7 @@ export  async function GetResturant(id:number) {
     return res.json()
 }
 
-export  async function AddResturant(authorname:string,
-    resturantname:string,
-    body:string) {
+export  async function AddResturant(authorname:string,resturantname:string, body:string) {
     const res = await fetch(API_PATH, {
         method: "POST",
         body: JSON.stringify({

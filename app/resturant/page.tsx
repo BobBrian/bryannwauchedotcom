@@ -1,8 +1,5 @@
-
 import React from 'react'
-import {useState, useEffect} from 'react'
 import Link from 'next/link'
-import { revalidatePath } from 'next/cache';
 import * as PostApi from  "@/app/lib/actions"
 import { Resturant } from '../lib/definitions';
 
@@ -11,26 +8,8 @@ type Resturants = Array <Resturant>
 
 export default async  function Home() {
 
- 
-  
-  // const [authorname,setAuthorname] = useState('')
-  // const [resturantname,setResturantname] = useState('')
-  // const [body,setBody] = useState('')
-
   const resturant : Resturants = await PostApi.GetAllResturant();
 
-  
-  // const handleSubmit = (e:any) => {
-  //   const rest = {authorname,resturantname,body}
-  //   fetch("http://localhost:3100/resturant",{
-  //     method: 'POST',
-  //     headers: { "Content-Type": "application/json" },
-  //     body: JSON.stringify(rest)
-
-  //   }).then(() =>{
-  //     alert("Todo Added Successfully")
-  //   })
-  // }
 
   // const deleteTodo = (id:number) => {
   //   if(window.confirm('Review Has Been Deleted. Please Restart Page')){
