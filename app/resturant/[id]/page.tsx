@@ -1,4 +1,5 @@
 import getResturant from '@/app/api/getResturant'
+import { Resturant } from '@/app/lib/definitions'
 import Link from 'next/link'
 import React from 'react'
 
