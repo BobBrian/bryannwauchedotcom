@@ -1,6 +1,5 @@
 
 import { Resturant } from '@/app/lib/definitions'
-import Link from 'next/link'
 import React from 'react'
 import * as PostApi from  "@/app/lib/actions"
 import { revalidatePath } from 'next/cache'
@@ -22,7 +21,7 @@ export default async function ReviewDetails({params: {id}}: Params) {
         "use server";
         if(window.confirm('Are You Sure you want to delete this entry')){
           await PostApi.DeleteReview(id);
-          revalidatePath("/");
+          revalidatePath("/resturant");
         } 
     };
     

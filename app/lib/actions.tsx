@@ -1,5 +1,3 @@
-// This file contains HTTP request that work in tandem with json.server for your data.
-import React from 'react'
 import { Resturant, Todo } from "./definitions";
 
 const API_PATH = "http://localhost:3100/todos";

@@ -9,3 +9,7 @@ export type Todo = {
     id:number,
     description:string
 }
+
+export type Params = {
+    id:number
+}

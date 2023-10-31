@@ -10,17 +10,6 @@ export default async  function Home() {
 
   const resturant : Resturants = await PostApi.GetAllResturant();
 
-
-  // const deleteTodo = (id:number) => {
-  //   if(window.confirm('Review Has Been Deleted. Please Restart Page')){
-  //       fetch(`http://localhost:3100/resturant/${id}`,{
-  //       method:'DELETE'
-  //     }).then(() => {
-  //       console.log('Todo Deleted')
-  //     })
-  //   }
-  // }
-
   return (
     <main>
         <h1 className="text-slate-200 text-center text-4xl mb-8">Chibuikem Nwauche</h1>
@@ -45,9 +34,6 @@ export default async  function Home() {
                             Review Details
                         </th>
 
-                        <th scope="col" className="px-6 py-3">
-                            
-                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -65,13 +51,7 @@ export default async  function Home() {
                           focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm 
                           px-5 py-2.5 mr-2 mb-2 ">Details</Link>
                         </td>
-
-                        <td className="px-6 py-4">
-                        {/* <a className="mt-2 inline-flex items-center px-3 py-2 text-center text-white 
-                            bg-red-500 rounded-lg rounded-lg hover:bg-red-900" onClick={()=>{
-                                deleteTodo(rest.id)
-                            }}>Delete</a> */}
-                        </td>  
+ 
                       </tr>
                     ))}    
                 </tbody>
