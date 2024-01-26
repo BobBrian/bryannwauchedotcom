@@ -3,11 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently \"next dev\" \"json-server --watch data/data.json --port 3100\"",
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "double": "concurrently \"next dev\" \"json-server --watch data/data.json --port 3100\""
+    "single": "next dev"
   },
   "dependencies": {
     "concurrently": "^8.2.2",
