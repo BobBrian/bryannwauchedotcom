@@ -1,8 +1,12 @@
+import AppBody from "./components/appbody";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-       To The new Chibuiekm Bryan Nwauche Dot Com , Its Time to get Serious
-    </main>
+    <div className=" md:w-full  md:items-center md:justify-between">
+      <div className="font-mono">
+				<h1 className="text-gray-50 text-6xl text-center mt-6">Chibuikem Nwauche</h1>		
+			</div>
+      <AppBody/>
+    </div>
   );
 }
