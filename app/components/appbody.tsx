@@ -8,13 +8,17 @@ export default function AppBody() {
 
   return (
     <div className="bg-slate-200  w-[calc(80%-2rem)]  max-w-5xl pt-16 pr-16 pb-8 pl-16  m-auto z-2"> 
-        <a href="#">
+        <div>
             <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 text-center underline">
                 Hello Welcome to My Protfolio Site
             </h5> 
             <div className="flex  pb-8">
                 <div className="p-6 bg-transparent ">
-                    <p className="mb-3">I am full-stack developer which means I specialize in  building both The front end (the parts of a website a user sees and interacts with) and the back end (the behind-the-scenes data storage and processing) of a website which require different skill sets. </p>
+                    <div className="mb-3">I am full-stack developer which means I specialize in  building both The front  
+                     end (the parts of a website a user sees and interacts with) and the back end 
+                     (the behind-the-scenes data storage and processing) of a website which require 
+                     different skill sets.
+                    </div>
                     <h2 className="underline">Technology Specilizations</h2>
                     <ul className="max-w-md space-y-1 list-disc list-inside  mb-8">
                         <li>C#</li>
@@ -23,9 +27,9 @@ export default function AppBody() {
                         <li>Postgrsql</li>
                         <li>Nextjs</li>
                     </ul>
-                    <p className="mb-3 font-normal text-gray-700 dark:text-gray-400">
+                    <div className="mb-3 font-normal text-gray-700 dark:text-gray-400">
                         Below are projects that showcase my skills as a Full Stack Software Developer
-                    </p>
+                    </div>
                 </div>
 
             </div>
@@ -36,9 +40,9 @@ export default function AppBody() {
                             Todo Application
                         </h5> 
                     </a>
-                    <p className="mb-3 font-normal text-gray-700"> 
+                    <div className="mb-3 font-normal text-gray-700"> 
                         An Application to  plan out your tasks so that they are all accomplished .
-                    </p>
+                    </div>
                     <button className="inline-flex items-center px-3 py-2 text-sm font-medium 
                     text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 
                     focus:outline-none focus:ring-blue-300">
@@ -51,15 +55,15 @@ export default function AppBody() {
                             Review Application
                         </h5> 
                     </a>
-                    <p className="mb-3 font-normal text-gray-700">An Application to provide users a way to leave reviews 
-                    on specific resturants they have visited</p>
+                    <div className="mb-3 font-normal text-gray-700">An Application to provide users a way to leave reviews 
+                    on specific resturants they have visited</div>
                     <button  className="inline-flex items-center px-3 py-2 text-sm font-medium text-center text-white 
                     bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300" 
                     onClick={() => router.push('/resturant')}>View Project</button>
                 </div>
             </div>
            
-        </a>
+        </div>
     </div>
   )
 }
